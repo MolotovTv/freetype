@@ -336,7 +336,7 @@ func (f *Font) parseKern() error {
 	}
 	f.nKern, offset = int(u16(f.kern, offset)), offset+2
 	if 6*f.nKern != length-14 {
-		return FormatError("bad kern table length")
+		// return FormatError("bad kern table length")
 	}
 	return nil
 }
